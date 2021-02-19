@@ -1,0 +1,361 @@
+$textColor: #f6f0f0;
+$golden: #bd9b65;
+$card-bc:#1b2735;
+$grey: #5d5e6b;
+$textOpacity : rgba(81,82,98,0.5);
+$burgerBarColor: $golden;
+@mixin bColor{
+  background: #12141d;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(90deg, #12141d, #1b2735);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(90deg, #12141d, #1b2735); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+@mixin bColorMenu{
+  background: #1e130c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(75deg, #9a8478, #1e130c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(75deg, #9a8478, #1e130c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+@mixin bColorMenu-1{
+  background: #12141d;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(40deg, #12141d, #1b2735);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(40deg, #12141d, #1b2735); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+@mixin  textGradient{
+  background: $golden;
+  background: -webkit-radial-gradient(circle farthest-corner at center center, #f5deb3 0%, $golden 50%, wheat 100%);
+  background: -moz-radial-gradient(circle farthest-corner at center center, wheat  0%, $golden 50%, wheat 100%);
+  background: radial-gradient(circle farthest-corner at center center, wheat 0%, $golden 50%, wheat 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin bc-1{
+  background: #6D6027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #D3CBB8, #6D6027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #D3CBB8, #6D6027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.text-gold{
+  color: $golden;
+}
+.text-gray{
+  color: #636477;
+}
+.toolbar{
+  @include bColor();
+}
+.toolbar-w{
+  @include bColor();
+  //box-shadow: 0 0 2px $golden;
+}
+
+.wrapper {
+  @include bColor();
+}
+.menu{
+  @include bColor();
+}
+.menu-page{
+  transition: all ease-in 1s;
+  background-color: transparent;
+  box-shadow: none;
+}
+#menu li.active{
+  text-decoration: underline;
+}
+#menu li a{
+  text-decoration:none;
+  color: $textColor;
+}
+#menu li.active a:hover{
+  color: $textColor;
+}
+#menu li:hover{
+  //background: rgba(255,255,255, 0.8);
+}
+
+#menu li.active a{
+  text-decoration: none;
+  color: $golden !important;
+
+}
+.text-color{
+  color: $textColor;
+}
+.title{
+  color: $golden;
+}
+//_________________________________________card
+.tp-box__front {
+  background: $card-bc;
+  border: 1px solid $grey;
+  position: relative;
+  top: 0;
+
+  &:hover{
+    transition: all ease-in 0.2s;
+    top: -5px;
+    border: 1px solid $golden;
+    .text-card{
+      color: $golden;
+    }
+    .icon-card{
+      transition: all .6s !important;
+      color: $golden;
+    }
+  }
+}
+
+.tp-box__back {
+  background: $card-bc;
+  border: 1px solid $golden;
+
+}
+.icon-card{
+  color: $grey;
+}
+.partner-card{
+  background-color: #1b2735;
+}
+
+.menu-on{
+  @include bColorMenu();
+}
+.menu-off{
+  @include bColorMenu();
+}
+
+
+.burger-menu{
+  .burger-container {
+    .burger-inner {
+      transition: all ease-in 0.5s !important;
+      background-color:  $burgerBarColor !important ;
+      border-color:  $burgerBarColor !important;
+      &::before {
+        background-color: $golden !important;
+        border-color:  $burgerBarColor !important;
+      }
+      &::after {
+        background-color: $golden !important;
+        border-color: $burgerBarColor !important;
+      }
+    }
+  }
+  &.active .burger-container .burger-inner {
+    border-color: transparent !important;
+    background-color: transparent !important;
+    transition: border-color ease-in 0s !important;
+  }
+}
+.btn-c{
+  color: $golden !important;
+}
+.btn-c1{
+  color: #b3b3b5 !important;
+}
+
+.text-grad{
+  @include textGradient();
+}
+.text-title-1{
+  @include textGradient();
+}
+//___________________________
+
+.burger-link{
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  a{
+    @include textGradient();
+  }
+}
+
+.btn-container {
+  a {
+    color: $golden;
+  }
+  .btn-btn {
+    box-shadow: 0 0 2px $golden;
+    border-color: $golden;
+  }
+
+  .btn-btn:hover {
+    color: $golden !important;
+
+    box-shadow: 0 0 7px $golden;
+    border-color: $golden;
+  }
+
+  .btn-btn:before {
+    background: linear-gradient(
+        120deg,
+        transparent,
+        $golden,
+        transparent
+    );
+    transition: all 650ms;
+  }
+
+}
+
+.slick-dots li.slick-active button {
+  color: #fff !important;
+  opacity: .75 !important;
+}
+.slick-dots{
+  li{
+    button{
+      background-color: $golden !important;
+      opacity: .25 !important;
+
+    }
+  }
+
+}
+.partner-img-1{;
+}
+.partner-box-image{
+  @include bc-1();
+}
+.partner-box-image-2{
+  background: #485563;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.partner-box-image-3{
+  background: #1e130c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #9a8478, #1e130c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #9a8478, #1e130c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.team-card{
+  @include bColorMenu-1();
+  border: 1px solid $golden;
+}
+.name{
+  color: $golden;
+}
+
+.myTeam{
+  color: $golden;
+}
+.teams-position{
+  color: #8c8fac;
+}
+.quote{
+  color: #8c8fac;
+}
+
+.service-card{
+  @include bColorMenu-1();
+  position: relative;
+  top: 0;
+  box-shadow: 0 0 2px $golden;
+  &:hover{
+    transition: all ease-in .21s;
+    position: relative;
+    top: -5px;
+    box-shadow: 0 0 2px yellow;
+  }
+}
+
+.service-card-title{
+  color: $golden;
+
+}
+.service-card-subtitle{
+  color: #6a7085;
+}
+.footer{
+  background: #12141d;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(40deg, #12141d, #24374c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(40deg, #12141d, #24374c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.footer-mobile{
+  background: #12141d;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(40deg, #12141d, #24374c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(40deg, #12141d, #24374c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.say{
+  @include bColor();
+  box-shadow: 0 0 2px $golden;
+}
+.f-btn{
+  color: #1b2735;
+  background-color: $golden;
+}
+.f-input{
+  color: $golden;
+  background-color: rgba(66, 83, 117,0.1);
+}
+.f-text-area{
+  color: $golden;
+  background-color: rgba(66, 83, 117,0.1);
+}
+.f-input, .f-text-area {
+  &:focus{
+    box-shadow: 0 0 3px $golden;
+  }
+}
+::placeholder {
+  color: #8c8fac;
+  font-size: 13px;
+  font-weight: bold;
+}
+.product-title-1{
+  color: black;
+}
+.product-line{
+  background-color: black;
+}
+.product-card{
+  box-shadow: none;
+  border: 1px solid $golden;
+  @include bColor();
+}
+.card-p-icon{
+  color: $golden;
+}
+.product-title-1{
+  color: $golden;
+  opacity: 1;
+}
+.product-line{
+  background-color: $golden;
+}
+.card-p-text{
+  color: #6a7085;
+}
+.card-p-title{
+  color: $golden;
+}
+.card-p-icon-1, .card-p-icon-2, .card-p-icon-3 {
+  color: $golden;
+}
+.main-title{
+  color: $golden;
+}
+.footer-text-m{
+  color: #6a7085;
+}
+.animate {
+  position: relative;
+  top: 7px;
+  color: orange !important;
+}
+.service-p-icon{
+  color: $golden;
+}
+.card-p-text{
+  color: #6a7085;
+}
+.text-card{
+  color: #6a7085 !important;
+}
+.text-card-gold{
+  color: $golden !important;
+}
+

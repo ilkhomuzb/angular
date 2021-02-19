@@ -1,0 +1,433 @@
+$textColor: #272729;
+$golden: #365efa;
+$card-bc: #b1bbff;
+$grey: #a4aba6;
+$textOpacity : rgba(81,82,98,0.5);
+$burgerBarColor: $golden;
+$burgerBarColor1: $golden;
+@mixin bCard{
+  background-color: white;
+}
+@mixin bColor{
+  background: #0575E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+@mixin bColorMenu{
+  background: #c94b4b;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #4b134f, #c94b4b);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #4b134f, #c94b4b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+@mixin bColorMenu-1{
+  background: #12141d;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(40deg, #12141d, #1b2735);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(40deg, #12141d, #1b2735); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+@mixin  textGradient{
+  color: #fff;
+}
+@mixin bc-1{
+  background: #6D6027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #D3CBB8, #6D6027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #D3CBB8, #6D6027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.text-gold{
+  color: $golden;
+}
+.text-gray{
+  color: #636477;
+}
+.toolbar{
+  background: #000428;
+}
+.burger-page-1{
+  .burger-menu{
+    .burger-container {
+      .burger-inner {
+        transition: all ease-in 0s ;
+        background-color:  #3db39e  ;
+        border-color:  #3db39e ;
+        &::before {
+          background-color: #3db39e ;
+          border-color:  #3db39e ;
+        }
+        &::after {
+          background-color: #3db39e ;
+          border-color: #3db39e ;
+        }
+      }
+    }
+  }
+}
+.toolbar-w{
+  background: white !important;
+  box-shadow: 0 0 6px #e7dede;
+}
+.menu-1{
+  //@include bColor();
+}
+
+.menu{
+  background-color: #ffffff;
+  box-shadow: 0 0 8px #d0c7c7;
+}
+.menu-page{
+  transition: all ease-in 1s;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.wrapper {
+  background-color: #fff;
+}
+.bc-wrapper{
+  background-image: url("../../assets/image/drag.jpeg");
+  background-image: -webkit-image-set(url('../../assets/image/drag.webp') 1x);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#menu li.active{
+  text-decoration: underline;
+}
+#menu li a{
+  text-decoration:none;
+  color: $textColor;
+}
+
+#menu li:hover{
+  //background: rgba(255,255,255, 0.8);
+}
+
+#menu li.active a{
+  text-decoration: none;
+  color: $golden;
+
+}
+
+.partner-link{
+  a{
+    transition: all ease-in 1s;
+    color: white !important;
+  }
+
+}
+.partner-link-a.active a{
+  color: #959d9b !important;
+
+}
+.text-color{
+  color: $textColor;
+}
+.title{
+  color: $golden;
+}
+//_________________________________________card
+.tp-box__front {
+  position: relative;
+  top: 0;
+  color: $textColor !important;
+  @include bCard();
+  box-shadow: 0 0 8px #dbd3d3;
+  &:hover{
+    transition: all ease-in 0.2s;
+    top: -5px;
+    box-shadow: 0 0 8px $golden;
+    .text-card{
+      color: $golden;
+    }
+    .icon-card{
+      transition: all 1.2s !important;
+      color: $golden;
+    }
+  }
+}
+
+.tp-box__back {
+  @include bCard();
+  box-shadow: 0 0 8px $golden;
+
+}
+.icon-card{
+  color: #353131;
+}
+.partner-card{
+  margin: 2px;
+  background-color: #fff;
+  box-shadow: 0 0 8px #c6d2db;
+}
+
+.menu-on{
+  @include bColorMenu();
+}
+.menu-off{
+  @include bColorMenu();
+}
+
+
+.burger-menu{
+  .burger-container {
+    .burger-inner {
+      transition: all ease-in 0.5s !important;
+      background-color:  $burgerBarColor1 !important ;
+      border-color:  $burgerBarColor1 !important;
+      &::before {
+        background-color: $golden !important;
+        border-color:  $burgerBarColor1 !important;
+      }
+      &::after {
+        background-color: $golden !important;
+        border-color: $burgerBarColor1 !important;
+      }
+    }
+  }
+  &.active .burger-container .burger-inner {
+    border-color: transparent !important;
+    background-color: transparent !important;
+    transition: border-color ease-in 0s !important;
+  }
+}
+.btn-c{
+  color: orange !important;
+}
+.btn-c1{
+  color: #d5d5db !important;
+}
+
+.text-grad{
+  @include textGradient();
+}
+.text-title-1{
+  @include textGradient();
+}
+//___________________________
+
+.burger-link{
+  border-bottom: 1px solid rgba(224, 217, 217, 0.1);
+  a{
+    @include textGradient();
+  }
+}
+
+.btn-container {
+  a {
+    color: $golden;
+  }
+  .btn-btn {
+    box-shadow: 0 0 2px $golden;
+    border-color: $golden;
+  }
+
+  .btn-btn:hover {
+    color: $golden !important;
+
+    box-shadow: 0 0 7px $golden;
+    border-color: $golden;
+  }
+
+  .btn-btn:before {
+    background: linear-gradient(
+        120deg,
+        transparent,
+        $golden,
+        transparent
+    );
+    transition: all 650ms;
+  }
+
+}
+
+.slick-dots li.slick-active button {
+  color: #fff !important;
+  opacity: .75 !important;
+}
+.slick-dots{
+  li{
+    button{
+      background-color: $golden !important;
+      opacity: .25 !important;
+
+    }
+  }
+
+}
+.partner-img-1{;
+}
+.partner-box-image{
+  background: #0575E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.partner-box-image-2{
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.team-card{
+  background-color: white;
+  box-shadow: 0 0 6px #e5dcdc;
+}
+.name{
+  color: $golden;
+}
+
+.myTeam{
+  color: $golden;
+}
+.teams-position{
+  color: #3c3c43;
+}
+.quote{
+  color: #3c3c43;
+}
+
+.service-card{
+  position: relative;
+  top: 0;
+  box-shadow: 0 0 8px #e9e0e0;
+  &:hover{
+    transition: all ease-in .21s;
+    position: relative;
+    top: -5px;
+    box-shadow: 0 0 6px $golden;
+  }
+}
+
+.service-card-title{
+  color: #222222;
+
+}
+.product-box{
+  background-color: #fff !important;
+  box-shadow: 0 0 8px #cfc6c6;
+}
+.service-card-subtitle{
+  color: #222222;
+}
+
+.footer{
+  background: #283048;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.footer-mobile{
+  background: #283048;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #859398, #283048); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.say{
+  background-color: white;
+  box-shadow: 0 0 8px #cbbebe;
+}
+.f-btn{
+  color: #fff;
+  background-color: $golden;
+}
+.f-input{
+  color: $golden;
+  background-color: rgba(66, 83, 117,0.1);
+}
+.f-text-area{
+  color: $golden;
+  background-color: rgba(66, 83, 117,0.1);
+}
+.f-input, .f-text-area {
+  &:focus{
+    box-shadow: 0 0 3px $golden;
+  }
+}
+::placeholder {
+  color: #8c8fac;
+  font-size: 13px;
+  font-weight: bold;
+}
+.product-col{
+  background-image: url("../../assets/image/services-4.jpg") !important;
+  background-image: -webkit-image-set(url('../../assets/image/services-4.webp') 1x) !important;
+  &:before{
+    opacity: 0 !important;
+  }
+}
+.product-title-1{
+  color: #000;
+}
+.product-line{
+  background-color: #353131;
+}
+
+.card-p-1{
+  @include bColor();
+}
+.card-p-title-1{
+  color: #353131;
+}
+.card-p-2{
+  background: #fff;  /* fallback for old browsers */
+}
+.card-p-3{
+  background: #fff;  /* fallback for old browsers */
+}
+.card-p-icon-1{
+  color: #ffffff;
+}
+.card-p-icon-2{
+  color: #353131;
+}
+.card-p-icon-3{
+   color: #353131;
+}
+.main-title{
+  color: #eae3e3;
+}
+.footer-text-m{
+  color: white;
+}
+.animate-2{
+  transform: rotate(15deg);
+  color: #736f6d !important;
+  opacity: 0.7;
+}
+.service-p-icon{
+  color: #292929;
+}
+.service-card-bc{
+  .service-card-title{
+    color: white;
+  }
+  .service-card-subtitle{
+    color: #ece9e9;
+  }
+  background: #0575E6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.flip-card-b{
+  .tp-box__side{
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .icon-card{
+    color: white;
+  }
+  .text-card{
+    color: white;
+  }
+  &:hover{
+    .icon-card{
+      color: #e0dedc;
+    }
+    .text-card{
+      color: #e0dedc;
+    }
+  }
+}
+
